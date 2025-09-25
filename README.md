@@ -1,26 +1,71 @@
-📍 Gerador de Leads Públicos com Google Maps via Puppeteer
-Este projeto automatiza a extração de leads públicos de estabelecimentos comerciais no Google Maps usando Puppeteer.
+# 📍 Gerador de Leads Públicos — Google Maps + Puppeteer
+
+Bem-vindo ao repositório do meu Gerador de Leads Públicos!
+Este projeto automatiza a extração de informações públicas de estabelecimentos comerciais no Google Maps usando Puppeteer.
+
 Você pode buscar qualquer tipo de negócio — como clínicas, salões de beleza, cafeterias, escritórios, lojas, etc. — em qualquer cidade.
 
-🎯 Objetivo
-Facilitar a captura de informações públicas no Google Maps para gerar listas de contatos comerciais (leads) que podem ser usadas em:
+---
 
-Prospecção
+## 🎯 Objetivo
 
-Estratégias de marketing
+Facilitar a captura de informações públicas do Google Maps para gerar listas de contatos comerciais (leads) que podem ser usadas em:
 
-Estudos de mercado
+* 📞 Prospecção
 
-Análise de concorrência
+* 📊 Estratégias de marketing
 
-✏️ Como personalizar a busca
-Edite esta linha no arquivo index.js:
+* 🏪 Estudos de mercado
 
-js
-Copiar
-Editar
+* ⚔️ Análise de concorrência
+
+* 🚀 Funcionalidades
+
+* 🔍 Busca automatizada de negócios no Google Maps.
+
+* 🖱️ Rolagem automática para carregar mais resultados.
+
+* 📂 Extração dos 100 primeiros locais encontrados.
+
+* ✅ Coleta das informações
+
+---
+  
+
+## 🛠️ Tecnologias Utilizadas
+
+Node.js
+
+Puppeteer — automação do navegador Chrome/Chromium
+
+fs (nativo do Node.js) — manipulação de arquivos
+
+path (nativo do Node.js) — manipulação de caminhos
+
+---
+
+## 📂 Estrutura do Projeto
+
+```plaintext
+src/
+├── index.js       # Script principal (busca e coleta)
+├── leads.csv      # Arquivo gerado com os leads (exemplo de saída)
+└── package.json   # Configuração do projeto
+```
+
+---
+
+## ✏️ Como Personalizar a Busca
+
+No arquivo index.js, edite esta linha:
+
+```bash
 await page.type('#searchboxinput', 'escritórios de advocacia em Francisco Beltrão');
-Exemplos de personalização:
+```
+
+---
+
+## 📌 Exemplos de personalização:
 
 'salões de beleza em Curitiba'
 
@@ -30,86 +75,49 @@ Exemplos de personalização:
 
 'empresas de TI em Recife'
 
-📦 Dependências
-Pacote	Descrição
-puppeteer	Automação do navegador Chrome/Chromium
-fs	Módulo nativo do Node.js para arquivos
-path	Módulo nativo do Node.js para caminhos
+Se quiser mais ou menos que 100 resultados, altere esta linha:
 
-Instale com:
-
-bash
-Copiar
-Editar
-npm install
-⚙️ Passo a passo para executar
-Clone o repositório
-
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/seu-repositorio.git
-Acesse a pasta do projeto
-
-bash
-Copiar
-Editar
-cd seu-repositorio
-Instale as dependências
-
-bash
-Copiar
-Editar
-npm install
-Execute o script
-
-bash
-Copiar
-Editar
-node index.js
-💡 Durante a execução, o navegador será aberto em modo visível (headless: false) para simular uso humano e evitar bloqueios.
-
-🔄 O que o script faz
-Acessa o Google Maps
-
-Aceita os cookies (se aparecerem)
-
-Realiza a busca informada (ex: "salões de beleza em Curitiba")
-
-Rola a lista lateral até carregar o máximo de resultados
-
-Acessa os 100 primeiros locais encontrados
-
-Em cada local, extrai:
-
-✅ Nome
-
-📍 Endereço
-
-☎️ Telefone
-
-Gera e salva um arquivo CSV chamado escritorios.csv
-
-📂 Exemplo de saída (escritorios.csv)
-csv
-Copiar
-Editar
-"Nome","Endereço","Telefone"
-"Café Exemplo","Rua A, 123 - Centro","(46) 99999-0000"
-"Clínica XYZ","Av. Brasil, 456 - Centro","(11) 98888-7777"
-...
-💡 Dicas
-Para coletar mais ou menos que 100 resultados, edite esta linha no script:
-
-js
-Copiar
-Editar
 for (const link of links.slice(0, 100))
+
+---
+
+## ⚙️ Como Rodar o Projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o script:
+
+```bash
+node index.js
+```
+
+---
+
+## 💡 Observações Importantes
+
 O script depende da disponibilidade de informações no perfil público do Google Maps.
 
 Use a automação de forma ética e responsável, respeitando as políticas de uso do Google.
+💾 Geração de um arquivo CSV com os dados coletados.
 
-👨‍💻 Autor
-Desenvolvido por Patrick, focado em automações que economizam tempo, otimizam tarefas e geram valor real.
+👁️ Execução em modo visível (headless: false) para simular uso humano e evitar bloqueios.
 
-Contribuições, ideias e sugestões são muito bem-vindas!
+---
+
+## 📬 Contato
+
+- [📸 Instagram](https://www.instagram.com/_patrick.edueu_)
+- [💼 LinkedIn](https://www.linkedin.com/in/patrick-souza-b20b50248/)
+
+  ---
